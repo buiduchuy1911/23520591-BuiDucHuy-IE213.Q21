@@ -16,7 +16,7 @@ async function main() {
     await MoviesDAO.injectDB(client);
 
     app.listen(port, () => {
-      console.log(`Server is running on port: ${port}`);
+      console.log(`Server is running on port: http://localhost:${port}/api/v1/movies`);
     });
   } catch (e) {
     console.error("Error:", e);
