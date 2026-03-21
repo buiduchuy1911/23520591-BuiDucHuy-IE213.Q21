@@ -84,4 +84,67 @@ npm rundev
 **Bài 1: Thiết lập môi trường**
 - Tải và cài đặt Node.js, kiểm tra thành công với lệnh `node -v`
 
-![Câu 1.1](./Screenshots/1.2_npm_init.png)
+![Câu 1.1](./Screenshots/1.1-node-version.png)
+
+- Cài đặt Visual Studio Code
+- Khởi tạo cây thư mục dự án: `movie-reviews/backend`
+- Chạy `npm init -y` để tạo `package.json`
+
+![Câu 1.2](./Screenshots/1.2-npm-init.png)
+
+- Cài đặt các dependency: `express`, `cors`, `dotenv`, `mongodb`
+
+![Câu 1.3](./Screenshots/1.3-dependencies.png)
+
+- Cài đặt `nodemon` và cấu hình script `"dev": "nodemon index.js"`
+
+![Câu 1.4](./Screenshots/1.4-install-nodemon.png)
+
+- Thêm `"type": "module"` vào `package.json` để sử dụng ES6 import/export
+
+![Câu 1.5](./Screenshots/1.5-package.png)
+
+**Bài 2: Xây dựng backend**
+- Tạo file `server.js`: khởi tạo Express app, thêm middleware cors + express.json, mount route `/api/v1/movies`, xử lý lỗi 404
+ 
+![Câu 2.2](./Screenshots/2.2-server.js.png)
+
+- Tạo file `.env`: lưu biến `MOVIEREVIEWS_DB_URI`, `MOVIEREVIEWS_NS=sample_mflix`, `PORT=8000`
+
+![Câu 2.1](./Screenshots/2.1-env.png)
+
+- Tạo file `index.js`: kết nối MongoDB Atlas, gọi `MoviesDAO.injectDB()`, chạy server
+
+![Câu 2.3](./Screenshots/2.3-index.js.png)
+
+- Tạo thư mục `api/` và các file route + controller
+
+![Câu 2.4](./Screenshots/2.4-movies.route.js.png)
+![Câu 2.5](./Screenshots/2.5-movies.controller.js.png)
+
+- Tạo thư mục `dao/` và file `moviesDAO.js` (injectDB + getMovies)
+
+![Câu 2.6](./Screenshots/2.6-moviesDAO.js.png)
+
+- Cập nhật route để sử dụng Controller (`MoviesController.apiGetMovies`)
+- Fix lỗi thực tế: hạ Express từ v5 xuống v4, reinstall dependencies
+- Chạy server:
+
+![Câu 2.7](./Screenshots/2.7-run-server.png)
+
+***Chạy thử kết quả***
+- API trả danh sách phim:
+
+![Câu 2.8](./Screenshots/2.8-api-movies-info.png)
+
+- Lọc theo phân trang:
+
+![Câu 2.9](./Screenshots/2.9-movies-pagination.png)
+
+- Lọc theo rated:
+
+![Câu 2.10](./Screenshots/2.10-movies-rated.png)
+
+- Lọc theo tên phim:
+
+![Câu 2.11](./Screenshots/2.11-movies-filter.png)
