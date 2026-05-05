@@ -20,7 +20,7 @@ Cấu trúc repository được tổ chức thành từng thư mục riêng bi�
 | **[Lab02/](./Lab02)** | **Thiết lập Backend với Node.js + ExpressJS + MongoDB (Movie Reviews)** |  Hoàn thành | `lab02` |
 | **[Lab03/](./Lab03/)** | **Mở rộng Movie Reviews API (Movie Detail, Ratings, Reviews CRUD)** |  Hoàn thành | `lab03` |
 | **[Lab04/](./Lab04/)** | **Xây dựng Frontend Movie Reviews (React + React Router)** |  Hoàn thành | `lab04` |
-| **Lab05/** | [Tên bài Lab 05] |  Đang thực hiện | |
+| **[Lab05/](./Lab05/)** | **Xây dựng Frontend với ReactJS - Kết nối API Backend** |  Hoàn thành | `lab05` |
 | **Lab06/** | [Tên bài Lab 06] |  Đang thực hiện | |
 
 ---

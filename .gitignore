@@ -1,5 +1,7 @@
 # Node.js dependencies
 node_modules/
+/.pnp
+.pnp.js
 
 # Logs
 logs/
@@ -17,7 +19,10 @@ pids/
 
 # Environment variables
 .env
-.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 !.env.example
 
 # Test / coverage / build outputs
@@ -25,8 +30,24 @@ coverage/
 dist/
 build/
 *.tsbuildinfo
+.eslintcache
 
 # OS generated files
 .DS_Store
-Thumbs.db
-desktop.ini
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+ehthumbs_vista.db
+[Tt]humbs.db
+[Dd]esktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
